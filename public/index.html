@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DracinStream 2026</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo"><i class="fas fa-dragon"></i> Dracin<span>2026</span></div>
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Cari judul film...">
+      <button id="searchBtn"><i class="fas fa-search"></i></button>
+    </div>
+  </nav>
+
+  <section id="playerSection" class="player-container hidden">
+    <div class="backdrop-blur"></div>
+    <div class="player-wrapper">
+      <div class="video-header">
+        <button id="closePlayer" class="btn-icon"><i class="fas fa-arrow-left"></i> Kembali</button>
+        <h2 id="playerTitle">Judul Film</h2>
+      </div>
+      
+      <div class="iframe-container">
+        <div id="loadingMsg" class="loading-overlay">Memuat Stream...</div>
+        <iframe id="mainPlayer" src="" allowfullscreen sandbox="allow-scripts allow-same-origin allow-presentation"></iframe>
+        <div id="fallbackOverlay" class="fallback-overlay hidden">
+          <p>Sumber ini memblokir pemutaran di dalam web.</p>
+          <a id="directLink" href="#" target="_blank" class="btn-primary">
+            <i class="fas fa-external-link-alt"></i> Buka di Tab Baru
+          </a>
+        </div>
+      </div>
+
+      <div class="movie-info">
+        <div class="meta-tags" id="metaTags"></div>
+        <p id="movieDesc" class="desc-text"></p>
+      </div>
+
+      <div class="episode-list-container">
+        <h3>Pilih Episode</h3>
+        <div class="episodes-grid" id="episodeList">
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <main id="mainContent">
+    
+    <header class="hero">
+      <div class="hero-content">
+        <h1>Trending Dracin</h1>
+        <p>Tonton drama china terbaru dengan subtitle Indonesia.</p>
+      </div>
+    </header>
+
+    <section class="content-section">
+      <h2 id="sectionTitle">Rekomendasi Hari Ini</h2>
+      <div id="loader" class="loader hidden"></div>
+      <div class="grid-container" id="movieGrid">
+        </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 DracinStream. Created for Educational Purposes.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
