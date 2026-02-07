@@ -1,0 +1,15 @@
+{
+  "name": "dracin-stream-2026",
+  "version": "1.0.0",
+  "description": "Modern Dracin Streaming App",
+  "main": "api/index.js",
+  "scripts": {
+    "start": "node api/index.js"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.12"
+  },
+  "engines": {
+    "node": "18.x"
+  }
+}
